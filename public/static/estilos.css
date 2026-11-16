@@ -1,0 +1,220 @@
+/* ===== Diseño: rojo #AE1800, negro #201E1D, gris claro #F3F2F2 ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #F3F2F2;
+    color: #201E1D;
+    line-height: 1.5;
+    padding: 0;
+}
+
+/* ===== Cabecera roja ===== */
+.cabecera {
+    background-color: #AE1800;
+    color: white;
+    padding: 20px;
+    border-bottom: 4px solid #201E1D;
+}
+
+.cabecera h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.cabecera .subtitulo {
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+/* ===== Contenido ===== */
+.contenido {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* ===== Tarjetas de contadores ===== */
+.tarjetas {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    flex: 1;
+    min-width: 140px;
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.tarjeta h3 {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.tarjeta .numero {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tarjeta.vigente {
+    background-color: #2E7D32; /* verde */
+}
+
+.tarjeta.por-vencer {
+    background-color: #F9A825; /* ámbar */
+}
+
+.tarjeta.vencida {
+    background-color: #AE1800; /* rojo */
+}
+
+/* ===== Botón descargar ===== */
+.boton-descargar {
+    display: inline-block;
+    background-color: #201E1D;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-descargar:hover {
+    background-color: #000000;
+}
+
+/* ===== Paneles ===== */
+.panel {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #AE1800;
+}
+
+.panel ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.panel li {
+    margin-bottom: 6px;
+}
+
+/* ===== Tabla ===== */
+.tabla-paginas table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 0.85rem;
+}
+
+.tabla-paginas th,
+.tabla-paginas td {
+    border: 1px solid #ccc;
+    padding: 8px 6px;
+    text-align: left;
+}
+
+.tabla-paginas th {
+    background-color: #AE1800;
+    color: white;
+}
+
+.tabla-paginas tr:nth-child(even) {
+    background-color: #F3F2F2;
+}
+
+/* Filas por estado */
+.fila-vencida {
+    background-color: #FDECEA !important;
+}
+
+.fila-por-vencer {
+    background-color: #FFF3E0 !important;
+}
+
+/* Etiquetas de estado */
+.estado-vigente {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.estado-por-vencer {
+    color: #F9A825;
+    font-weight: bold;
+}
+
+.estado-vencida {
+    color: #AE1800;
+    font-weight: bold;
+}
+
+.alerta {
+    font-size: 0.75rem;
+    color: #AE1800;
+}
+
+.deshabilitado {
+    color: #999;
+}
+
+/* ===== Pie de página ===== */
+.pie {
+    background-color: #201E1D;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 0.8rem;
+    border-top: 4px solid #AE1800;
+}
+
+/* ===== Responsive: celular ===== */
+@media (max-width: 600px) {
+    .contenido {
+        padding: 0 10px;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tabla-paginas table {
+        font-size: 0.75rem;
+    }
+
+    .tabla-paginas th,
+    .tabla-paginas td {
+        padding: 6px 4px;
+    }
+
+    .boton-descargar {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .cabecera h1 {
+        font-size: 1.2rem;
+    }
+}
